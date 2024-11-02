@@ -1,11 +1,17 @@
-/* Base styles for mobile first approach */
+/* Base styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Times New Roman, serif;
+}
+
 div {
     width: 95%;
     margin: 0 auto;
-    padding: 0px 15px;
+    padding: 0 15px;
 }
 
-/* Tablets (portrait) */
+/* Media Queries */
 @media screen and (min-width: 768px) {
     div {
         width: 85%;
@@ -13,7 +19,6 @@ div {
     }
 }
 
-/* Tablets (landscape) and small desktops */
 @media screen and (min-width: 992px) {
     div {
         width: 80%;
@@ -21,7 +26,6 @@ div {
     }
 }
 
-/* Large desktops */
 @media screen and (min-width: 1200px) {
     div {
         width: 70%;
@@ -29,67 +33,12 @@ div {
     }
 }
 
-.features-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 96px;
-    padding: 0px 0px;
-}
-
-.feature-group {
-    display: flex;
-    gap: 12px;
-    flex: 1 1 calc(50% - 10px);
-    min-width: 300px;
-}
-
-.feature {
-    flex: 1;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top:48px;
-}
-
-.feature img, .feature b, .feature a {
-    display: block;
-    margin-bottom: 8px;  /* Adjust spacing as needed */
-}
-
-.feature img {
-    width: 100%;
-    max-width: 200px;
-    height: auto;
-}
-
-.feature a {
-    display: inline-block;
-    text-decoration: none;
-    color: #007bff;
-}
-
-/* Tablet and below */
-@media screen and (max-width: 992px) {
-    .feature-group {
-        flex: 1 1 100%;
-        gap:12px;
-    }
-}
-
-/* Mobile - stack features vertically */
-@media screen and (max-width: 576px) {
-    .feature-group {
-        flex-direction: column;
-        gap: 24px;
-    }
-}
-
+/* Styles in order of HTML appearance */
 header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0px;
+    gap: 0;
     text-align: center;
     max-width: 390px;
     margin: 0 auto;
@@ -107,6 +56,46 @@ header img {
     height: auto;
 }
 
+.features-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    padding: 48px 0;
+}
+
+@media screen and (min-width: 1024px) {
+    .features-row {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.feature {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.feature img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 16px;
+}
+
+.feature a {
+    text-decoration: none;
+    color: #007bff;
+    margin-top: 8px;
+}
+
+.COTSCN {
+    height: 96px;
+    display: flex;
+    justify-content: center;
+    padding: 96px 0;
+}
+
 .logo-grid {
     display: flex;
     flex-wrap: wrap;
@@ -115,17 +104,10 @@ header img {
 }
 
 .logo-grid img {
-    height: 44px;  /* Set your desired height here */
-    width: auto;    /* Maintains aspect ratio */
-    object-fit: cover;  /* Ensures image fills the space without distortion */
-    object-position: center;  /* Centers the image within its container */
-}
-
-.COTSCN {
-    height: 96px;
-    display: flex;
-    justify-content: center;
-    padding: 96px 0px;
+    height: 44px;
+    width: auto;
+    object-fit: cover;
+    object-position: center;
 }
 
 footer {
@@ -133,10 +115,5 @@ footer {
     justify-content: center;
     padding: 48px 0;
     gap: 12px;
-    opacity: 25%;
+    opacity: 0.25;
 }
-
-
-
-
-
