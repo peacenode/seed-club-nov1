@@ -112,7 +112,7 @@ header img {
 footer {
     display: flex;
     justify-content: center;
-    padding: 48px 0;
+    padding: 96px 0;
     gap: 12px;
     opacity: 0.25;
 }
