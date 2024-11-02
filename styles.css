@@ -1,0 +1,142 @@
+/* Base styles for mobile first approach */
+div {
+    width: 95%;
+    margin: 0 auto;
+    padding: 0px 15px;
+}
+
+/* Tablets (portrait) */
+@media screen and (min-width: 768px) {
+    div {
+        width: 85%;
+        max-width: 720px;
+    }
+}
+
+/* Tablets (landscape) and small desktops */
+@media screen and (min-width: 992px) {
+    div {
+        width: 80%;
+        max-width: 960px;
+    }
+}
+
+/* Large desktops */
+@media screen and (min-width: 1200px) {
+    div {
+        width: 70%;
+        max-width: 1140px;
+    }
+}
+
+.features-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 96px;
+    padding: 0px 0px;
+}
+
+.feature-group {
+    display: flex;
+    gap: 12px;
+    flex: 1 1 calc(50% - 10px);
+    min-width: 300px;
+}
+
+.feature {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top:48px;
+}
+
+.feature img, .feature b, .feature a {
+    display: block;
+    margin-bottom: 8px;  /* Adjust spacing as needed */
+}
+
+.feature img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+}
+
+.feature a {
+    display: inline-block;
+    text-decoration: none;
+    color: #007bff;
+}
+
+/* Tablet and below */
+@media screen and (max-width: 992px) {
+    .feature-group {
+        flex: 1 1 100%;
+        gap:12px;
+    }
+}
+
+/* Mobile - stack features vertically */
+@media screen and (max-width: 576px) {
+    .feature-group {
+        flex-direction: column;
+        gap: 24px;
+    }
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+    text-align: center;
+    max-width: 390px;
+    margin: 0 auto;
+    padding-bottom: 48px;
+}
+
+header h1 {
+    font-size: 48px;
+    letter-spacing: -0.06em;
+    line-height: 1;
+}
+
+header img {
+    max-width: 100%;
+    height: auto;
+}
+
+.logo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 48px;
+    justify-content: center;
+}
+
+.logo-grid img {
+    height: 44px;  /* Set your desired height here */
+    width: auto;    /* Maintains aspect ratio */
+    object-fit: cover;  /* Ensures image fills the space without distortion */
+    object-position: center;  /* Centers the image within its container */
+}
+
+.COTSCN {
+    height: 96px;
+    display: flex;
+    justify-content: center;
+    padding: 96px 0px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 48px 0;
+    gap: 12px;
+    opacity: 25%;
+}
+
+
+
+
+
